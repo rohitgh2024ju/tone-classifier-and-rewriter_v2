@@ -1,0 +1,12 @@
+# environment variables
+.env
+
+# python cache
+__pycache__/
+
+# virtual environment
+webtone_env/
+
+# optional extras
+*.pyc
+.vscode/

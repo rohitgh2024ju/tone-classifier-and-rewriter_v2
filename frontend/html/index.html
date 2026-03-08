@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToneLab</title>
+
+    <link rel="stylesheet" href="../css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+</head>
+
+<body>
+
+    <!-- INTRO ANIMATION -->
+    <div class="intro">
+        <h1 class="intro-logo">✦ ToneLab</h1>
+        <p class="skip-text">Click anywhere to skip</p>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html">✦ ToneLab</a></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="how.html">How it Works</a>
+            <a href="about.html">About</a>
+            <a href="github.html">GitHub</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Write Smarter, Not Harder</h1>
+        <p>Analyze your message tone and rewrite it with AI.</p>
+    </section>
+
+
+    <!-- TOOL SECTION -->
+    <section class="tool">
+        <div style="margin-bottom: 8px; margin-left: 8px;">0 characters</div>
+        <textarea placeholder="Enter your message here..." class="input-box"></textarea>
+
+        <div class="controls">
+
+            <select class="tone-select">
+                <option value="Profession">Professional</option>
+                <option class="Polite">Polite</option>
+                <option class="Friendly">Friendly</option>
+                <option class="Assertive">Assertive</option>
+                <option value="Formal">Formal</option>
+                <option class="Casual">Casual</option>
+            </select>
+
+            <button class="analyze-btn">Analyze & Rewrite</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT -->
+    <section class="results"></section>
+
+
+    <!-- IMPROVEMENTS -->
+    <section class="improvements"></section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-section">
+
+                <h3>ToneLab</h3>
+
+                <p>AI-powered tone analysis and message rewriting.</p>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h4>Quick Links</h4>
+
+                <a href="index.html">Home</a>
+                <a href="how.html">How it Works</a>
+                <a href="about.html">About</a>
+                <a href="github.html">GitHub</a>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h4>Contact</h4>
+
+                <p>Email: rohitstudying2004@gmail.com</p>
+                <p>Phone: +91 9330808358</p>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h4>Connect</h4>
+
+                <a href="https://www.linkedin.com/in/rohit-saha-091b6a326/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/rohitgh2024ju" target="_blank">GitHub</a>
+
+            </div>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 ToneLab • Built by Rohit • Open source on GitHub
+        </p>
+
+    </footer>
+
+
+    <!-- INTRO SCRIPT -->
+    <script>
+        window.addEventListener("load", () => {
+            const intro = document.querySelector(".intro");
+
+            setTimeout(() => {
+                intro.style.opacity = "0";
+                intro.style.pointerEvents = "none";
+            }, 1500);
+        });
+    </script>
+
+    <script src="../analyze.js"></script>
+
+</body>
+
+</html>
