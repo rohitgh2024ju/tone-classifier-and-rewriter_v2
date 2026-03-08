@@ -22,13 +22,12 @@ window.addEventListener("load", () => {
 
 // CHARACTER COUNTER
 function updateCharCount() {
-  if (!charCount) return;
   charCount.textContent = `${textElement.value.length} characters`;
 }
 
-if (textElement) {
+if (textElement && charCount) {
   textElement.addEventListener("input", updateCharCount);
-  updateCharCount(); // initialize on page load
+  updateCharCount();
 }
 
 // API CALL

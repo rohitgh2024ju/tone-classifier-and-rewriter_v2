@@ -39,10 +39,8 @@ async def lifespan(app: FastAPI):
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
     model = AutoModelForSequenceClassification.from_pretrained(
-        MODEL_NAME, dtype=torch.float16, low_cpu_mem_usage=True
+        MODEL_NAME, low_cpu_mem_usage=True
     )
-
-
 
     model.to(device)
     model.eval()
@@ -50,7 +48,6 @@ async def lifespan(app: FastAPI):
     torch.set_grad_enabled(False)
 
     print("Model loaded successfully.")
-
 
     yield
 
@@ -72,9 +69,9 @@ app.add_middleware(
 # ---------------- CLASSIFICATION ----------------
 def classify(text: str):
 
-    inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True).to(
-        device
-    )
+    inputs = tokenizer(
+        text, return_tensors="pt", truncation=True, padding="max_length", max_length=256
+    ).to(device)
 
     outputs = model(**inputs)
 
